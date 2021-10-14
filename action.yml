@@ -14,6 +14,8 @@ inputs:
 outputs:
   pullRequestNumber:
     description: 'The number of pr'
+  pullRequestState:
+    description: 'The state of pr'
 runs:
   using: 'node12'
   main: 'dist/index.js'
