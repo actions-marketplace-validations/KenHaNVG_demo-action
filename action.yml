@@ -12,10 +12,10 @@ inputs:
     required: true
     description: 'pr number'
 outputs:
-  pullRequestNumber:
-    description: 'The number of pr'
   pullRequestState:
     description: 'The state of pr'
+  pullRequestNumber:
+    description: 'The number of pr'
 runs:
   using: 'node12'
   main: 'dist/index.js'
