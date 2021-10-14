@@ -1,8 +1,9 @@
 name: 'KenHa action demo'
 description: 'A demo of Ken'
 author: 'KenHa'
-icon: 'award'
-color: 'red'
+branding:
+  icon: 'award'  
+  color: 'red'
 inputs:
   GITHUB_TOKEN:
     required: true
