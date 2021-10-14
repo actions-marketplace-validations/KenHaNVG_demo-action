@@ -2,11 +2,15 @@ name: 'Your name here'
 description: 'Provide a description here'
 author: 'Your name or organization here'
 inputs:
-  GITHUB_TOKEN: abc
-  PullRequestNumber: 5
-outputs: 
-  pullRequestNumber: 5,
-  pullRequestState: 'closed'
+  GITHUB_TOKEN:
+    required: true
+    description: 'github token'
+  PullRequestNumber:
+    required: true
+    description: 'pr number'
+outputs:
+  pullRequestNumber:
+    description: 'The number of pr'
 runs:
   using: 'node12'
   main: 'dist/index.js'
