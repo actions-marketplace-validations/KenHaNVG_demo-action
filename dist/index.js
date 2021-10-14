@@ -46,13 +46,10 @@ function run() {
             const { data: pullRequest } = yield octokit.rest.pulls.get({
                 owner: github.context.repo.owner,
                 repo: github.context.repo.repo,
-                pull_number: +number,
-                mediaType: {
-                    format: 'diff'
-                }
+                pull_number: +number
             });
-            core.setOutput('pullRequestNumber', pullRequest.number);
             core.setOutput('pullRequestState', pullRequest.state);
+            core.setOutput('pullRequestNumber', pullRequest.number);
         }
         catch (error) {
             if (error instanceof Error)
